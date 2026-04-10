@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>MARK v8.3</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<div class="wrap">
+  <h1>MARK v8.3 Dashboard</h1>
+  <section class="card" id="loginCard">
+    <h2>Login</h2>
+    <input id="username" placeholder="username" value="admin" />
+    <input id="password" placeholder="password" type="password" value="admin123" />
+    <button onclick="login()">Login</button>
+    <div id="loginStatus"></div>
+  </section>
+  <section class="grid">
+    <div class="card"><h2>Summary</h2><pre id="summary">{}</pre></div>
+    <div class="card"><h2>Financials</h2><pre id="financials">{}</pre></div>
+  </section>
+  <section class="card">
+    <h2>Create Task</h2>
+    <input id="taskTitle" placeholder="Task title">
+    <textarea id="taskDescription" placeholder="Description"></textarea>
+    <label><input type="checkbox" id="requiresOnline"> Requires online</label>
+    <label><input type="checkbox" id="requiresWorker"> Requires worker</label>
+    <button onclick="createTask()">Create Draft</button>
+  </section>
+  <section class="grid">
+    <div class="card"><h2>Drafts</h2><div id="drafts"></div></div>
+    <div class="card"><h2>Approvals</h2><div id="approvals"></div></div>
+  </section>
+  <section class="grid">
+    <div class="card"><h2>Workers</h2><pre id="workers">[]</pre></div>
+    <div class="card"><h2>Devices</h2><pre id="devices">[]</pre></div>
+  </section>
+  <section class="grid">
+    <div class="card"><h2>Runtime</h2><pre id="runtime">{}</pre></div>
+    <div class="card"><h2>Commands</h2><pre id="commands">[]</pre></div>
+  </section>
+</div>
+<script src="/app.js"></script>
+</body></html>
