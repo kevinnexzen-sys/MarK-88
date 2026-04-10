@@ -1,0 +1,8 @@
+services:
+  mark:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8787:8787"
+    restart: unless-stopped
